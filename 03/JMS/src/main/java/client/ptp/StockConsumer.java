@@ -1,4 +1,6 @@
-package client;
+package client.ptp;
+
+import client.ConsumerListener;
 
 import javax.jms.*;
 import javax.naming.Context;
@@ -20,7 +22,7 @@ public class StockConsumer {
             Context jndiContext = new InitialContext(properties);
 
             // lookup a destination object
-            String destinationName = "dynamicTopics/Quotazioni";
+            String destinationName = "dynamicTopics/Stocks";
             Destination destination = (Destination) jndiContext.lookup(destinationName);
 
             // look up for the connection factory

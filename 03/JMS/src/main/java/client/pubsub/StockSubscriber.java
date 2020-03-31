@@ -1,4 +1,6 @@
-package client;
+package client.pubsub;
+
+import client.ConsumerListener;
 
 import javax.jms.*;
 import javax.naming.Context;
